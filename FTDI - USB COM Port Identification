@@ -1,11 +1,26 @@
 @echo off
 cd /
-echo #######################################
-echo ITS MY GALAXY
-echo COM PORT FIND SCRIPT [ FTDI ]
-echo #######################################
-for /f "tokens=3" %%a in ('REG QUERY HKLM\HARDWARE\DEVICEMAP\SERIALCOMM\'); do echo USB Serial Port: %%a
+TITLE ITS MY GALAXY [USB Serial COM Port]
 echo:
 echo.
+echo:
+COLOR 1F
+echo                ##########################################
+echo                ##            ITS MY GALAXY             ##
+echo                ##                                      ##
+echo                ##  USB Serial COM Port Script [ FTDI ] ##
+echo                ##                                      ##
+echo                ##  Putty Config - SPEED: 9600 / 115200 ##
+echo                ##########################################
+echo:
+echo.
+echo:
+REM echo =======================
+for /f "tokens=3" %%a in ('REG QUERY HKLM\HARDWARE\DEVICEMAP\SERIALCOMM\'); do echo   USB Serial Port: %%a
+REM echo =======================
+
+echo:
+echo.
+
 echo Press any key to close this window.....
 Pause >nul
