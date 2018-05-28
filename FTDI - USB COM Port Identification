@@ -1,0 +1,11 @@
+@echo off
+cd /
+echo #######################################
+echo ITS MY GALAXY
+echo COM PORT FIND SCRIPT [ FTDI ]
+echo #######################################
+for /f "tokens=3" %%a in ('REG QUERY HKLM\HARDWARE\DEVICEMAP\SERIALCOMM\'); do echo USB Serial Port: %%a
+echo:
+echo.
+echo Press any key to close this window.....
+Pause >nul
